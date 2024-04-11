@@ -1,0 +1,9 @@
+[w, ft, q] = read_motoman
+%q(1) = 0
+x1 = ft2endeffector(q,ft)
+%rend = r
+x2 = ft2base(q,ft)
+%rbas = rend + r
+T = T6*t6F*tFE
+r = T(1:3,4)
+M = cross(r,x2(1:3))%sila more bit izrazena v istem koordinatnem sistemu
